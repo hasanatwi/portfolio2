@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Career Portfolio</title>
+	<script src="script1.js" defer></script>
+	<style>
+		body {
+			background-color: #f5f5f5; /* Light gray background */
+			color: #333;
+			font-family: 'Arial', sans-serif;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+		}
+		.WRN {
+			background-color: #ffffff; /* White background to match the contact-info section */
+			color: #333; /* Text color consistent with other sections */
+			width: 80%;
+			max-width: 700px;
+			margin: 50px auto;
+			padding: 20px;
+			border-radius: 12px;
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+			text-align: center;
+			font-size: 1.2rem;
+		}
+		.WRN a {
+			display: inline-block;
+			background-color: #009688; /* Teal color */
+			color: #ffffff;
+			padding: 15px 30px;
+			border-radius: 12px;
+			text-decoration: none;
+			font-size: 1.2rem;
+			transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+		}
+		.WRN a:hover {
+			background-color: #00796b; /* Darker teal */
+			transform: scale(1.05);
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+		}
+		.portfolio-title {
+			font-size: 4rem;
+			font-family: 'Roboto', sans-serif;
+			color: #009688; /* Teal color */
+			margin-top: 30px;
+			text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+		}
+		.myName {
+			font-size: 1.5rem;
+			color: #666;
+			margin-top: 10px;
+			font-family: 'Georgia', serif;
+		}
+		.button {
+			display: inline-block;
+			background-color: #009688; /* Teal color */
+			color: #ffffff;
+			border: none;
+			padding: 15px 30px;
+			font-size: 1.2rem;
+			font-family: 'Arial', sans-serif;
+			cursor: pointer;
+			border-radius: 12px;
+			text-decoration: none;
+			margin-top: 20px;
+			transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+		}
+		.button:hover {
+			background-color: #00796b; /* Darker teal */
+			transform: scale(1.05);
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+		}
+		.contact-info {
+			background-color: #ffffff;
+			color: #333;
+			width: 80%;
+			max-width: 900px;
+			margin: 50px auto;
+			padding: 40px;
+			border-radius: 12px;
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+		}
+		.contact-info p {
+			font-size: 1.5rem;
+			margin-bottom: 20px;
+			font-weight: bold;
+		}
+		.socialMedia {
+			height: 60px;
+			width: 60px;
+			border: none;
+			padding: 0;
+			cursor: pointer;
+			transition: transform 0.3s ease, box-shadow 0.3s;
+		}
+		.socialMedia:hover {
+			transform: scale(1.1);
+			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+		}
+		.contact-info img {
+			margin: 15px;
+		}
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin: 20px auto;
+		}
+		td {
+			text-align: center;
+		}
+		@media (max-width: 600px) {
+			.portfolio-title {
+				font-size: 3rem;
+			}
+			.myName {
+				font-size: 1.2rem;
+			}
+			.contact-info {
+				width: 90%;
+			}
+			.contact-info p {
+				font-size: 1.2rem;
+			}
+		}
+		.professionalDevelopmentPlan, .CV, .Cover-letter-sample {
+			margin: 20px;
+			padding: 15px;
+			background-color: #009688; /* Teal color */
+			color: #ffffff;
+			border-radius: 12px;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 1.2rem;
+			transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+		}
+		.professionalDevelopmentPlan a, .CV a, .Cover-letter-sample a {
+			text-decoration: none;
+			color: #ffffff;
+		}
+		.professionalDevelopmentPlan:hover, .CV:hover, .Cover-letter-sample:hover {
+			background-color: #00796b; /* Darker teal */
+			transform: scale(1.05);
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+		}
+		.professionalDevelopmentPlan2 {
+			width: 80%;
+			max-width: 700px;
+			background-color: #004d40; /* Dark teal */
+			margin: 50px auto;
+			padding: 25px;
+			border-radius: 12px;
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+		}
+		.professionalDevelopmentPlan2 h2 {
+			color: #ffffff;
+			font-size: 2rem;
+			margin-top: 0;
+		}
+		img.profile-picture {
+			width: 150px; /* Adjust size as needed */
+			height: 150px; /* Adjust size as needed */
+			border-radius: 50%; /* Makes the picture round */
+			margin-top: 20px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.mySkills {
+			background-color: #ffffff;
+			color: #333;
+			width: 80%;
+			max-width: 700px;
+			margin: 50px auto;
+			padding: 20px;
+			border-radius: 12px;
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+		}
+		.mySkills h2 {
+			color: #009688; /* Teal color */
+			font-size: 2rem;
+			margin-bottom: 15px;
+		}
+		.mySkills p {
+			font-size: 1.2rem;
+			margin: 0;
+		}
+		.skill-set {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 15px;
+		}
+		.skill-set img {
+			margin-left: 10px;
+			width: 50px;
+			height: 50px;
+		}
+		.self-reflection-report {
+			background-color: #ffffff;
+			color: #333;
+			width: 80%;
+			max-width: 700px;
+			margin: 50px auto;
+			padding: 20px;
+			border-radius: 12px;
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+			text-align: center;
+			font-size: 1.2rem;
+		}
+		.self-reflection-report a {
+			display: inline-block;
+			background-color: #009688; /* Teal color */
+			color: #ffffff;
+			padding: 15px 30px;
+			border-radius: 12px;
+			text-decoration: none;
+			font-size: 1.2rem;
+			transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+		}
+		.self-reflection-report a:hover {
+			background-color: #00796b; /* Darker teal */
+			transform: scale(1.05);
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+		}
+	</style>
+</head>
+<body>
+	<img src="profile_picture.jpg" alt="Profile Picture" class="profile-picture">
+	<p class="myName">My name is Hassan Atoui <br> <span class="portfolio-title">Computer Scientist<span></p>
+	<a href="#section1" class="button">Contact me</a><br>
+	<!-- The following sections are links to other parts of the portfolio -->
+	<div class="mySkills">
+		<h2>My skills</h2>
+		<tr>
+		<div class="skill-set">
+			<p>HTML</p>
+			<img src="html.png" alt="HTML">
+		</div>
+		<div class="skill-set">
+			<p>CSS</p>
+			<img src="css.png" alt="CSS">
+		</div>
+		<div class="skill-set">
+			<p>JavaScript</p>
+			<img src="javascript.png" alt="JavaScript">
+		</div>
+		<div class="skill-set">
+			<p>Basic PHP</p>
+			<img src="php.png" alt="PHP">
+		</div>
+		<div class="skill-set">
+			<p>Java</p>
+			<img src="java.png" alt="Java">
+		</div>
+		<div class="skill-set">
+			<p>C</p>
+			<img src="c.png" alt="C">
+		</div>
+		<div class="skill-set">
+			<p>C++</p>
+			<img src="c++.png" alt="C++">
+		</div>
+
+		<h2>Workshops attended:</h2>
+		<p>Public Speaking, Cybersecurity, Excel</p>
+	</div>
+	<div  style="background-color:yellow" class="self reflection report">
+	<h2>Self reflection report</h2>
+	<a href="self%20reflection%20report.html">the link to see the self reflection report</a>
+	</div>
+	<div class="professionalDevelopmentPlan2">
+			<h2>Job Seeking Skills</h2>
+			<div class="professionalDevelopmentPlan">
+				<a href="professional%20development%20plan.html">Professional Development Plan</a>
+			</div>
+			<div class="CV">
+				<a href="CV.html">CV</a>
+			</div>
+			<div class="Cover-letter-sample">
+				<a href="Cover%20letter%20sample.html">Cover Letter</a>
+			</div>
+		</div>
+		<div class="WRN">
+		<a href="WRN virtual assignments.html">WRN virtual assignments</a>
+		</DIV>
+		<div class="contact-info" id="section1">
+			<p class="contactMe">Contact me on the following:</p>
+			<table>
+				<tr>
+					<td>
+						<button type="button" id="whatsapp">
+							<img class="socialMedia" id="whatsappImg" src="whatsapp logo.png" alt="WhatsApp">
+						</button>
+					</td>
+					<td>
+						<a href="https://www.instagram.com/hasanatwi964?igsh=OTR0Z2NreHJyMmJ5">
+							<img class="socialMedia" src="instagram logo.jpeg" alt="Instagram">
+						</a>
+					</td>
+					<td>
+						<a href="https://www.linkedin.com/in/hasan-atwi-13a03528a/">
+							<img class="socialMedia" src="linkedIn.png" alt="LinkedIn">
+						</a>
+					</td>
+					<td>
+						<a href="mailto:hasanatwi00@gmail.com">
+							<img class="socialMedia" src="gmail.png" alt="Gmail">
+						</a>
+					</td>
+				</tr>
+			</table>
+			</div>
+</body>
+</html>
